@@ -22,7 +22,9 @@ app.post('/',
     res.status(400).json(errors.array());
   });
 
+
 app.use('/api/users', userRouter);
+
 
 app.listen(4000, async () => {
   try {

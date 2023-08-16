@@ -5,4 +5,3 @@ export const sequelize = new Sequelize('express_validator', 'root', '', {
   dialect: 'mysql'
 });
 
-

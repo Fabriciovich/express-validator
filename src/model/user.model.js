@@ -13,4 +13,4 @@ export const UserModel = sequelize.define('User', {
   timestamps: true
 });
 
-
+UserModel.sync({force:true})

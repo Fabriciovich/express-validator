@@ -3,9 +3,9 @@ import { UserModel } from '../model/user.model.js';
 export const createUserCtrl = async (req, res) => {
   try {
     const newUser = await UserModel.create(req.body);
-    res.status(201).json(newUser);
+    res.status(201).json(req.body);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error });
   }
 };
 
@@ -14,7 +14,7 @@ export const getUsersCtrl = async (req, res) => {
     const users = await UserModel.find();
     res.status(200).json(users);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error });
   }
 };
 

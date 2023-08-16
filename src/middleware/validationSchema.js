@@ -5,8 +5,10 @@ export const validateSchema = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
+    console.log('hay un error')
     return res.status(400).json({ errors: errors.array() });
-  }
 
+  }
+ 
   next();
 };
